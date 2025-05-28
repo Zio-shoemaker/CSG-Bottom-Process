@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>비밀번호로 보호된 접근</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    input {
+      padding: 8px;
+      font-size: 16px;
+    }
+    button {
+      padding: 8px 16px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>CSG_BOTTOM PROCESS</h2>
+  <p>비밀번호를 입력하세요:</p>
+  <input type="password" id="passwordInput" placeholder="비밀번호 입력">
+  <button onclick="checkPassword()">입장</button>
+
+  <script>
+    const correctPassword = "201800061"; // 원하는 비밀번호 입력
+    const redirectUrl = "https://dent-jellyfish-cd1.notion.site/BOTTOM-PROCESS-16f9833b2e8e80ff8e08eb5829c1d20c"; // 이동할 사이트 주소
+
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      if (input === correctPassword) {
+        window.location.href = redirectUrl;
+      } else {
+        alert("비밀번호가 틀렸습니다.");
+      }
+    }
+  </script>
+</body>
+</html>
